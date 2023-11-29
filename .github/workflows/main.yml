@@ -9,7 +9,7 @@ on:
         default: false
 
 env:
-  kernel_repository: PixelExperience-Devices/kernel_xiaomi_polaris
+  kernel_repository: PixelExperience-Devices/kernel_xiaomi_sm6225
   kernel_branch: thirteen
   device: dipper
   defconfig: dipper_defconfig
