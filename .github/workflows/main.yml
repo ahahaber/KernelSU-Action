@@ -10,7 +10,7 @@ on:
 
 env:
   kernel_repository: PixelExperience-Devices/kernel_xiaomi_sm6225
-  kernel_branch: thirteen
+  kernel_branch: fourteen
   device: dipper
   defconfig: dipper_defconfig
   use_aosp_clang: false
