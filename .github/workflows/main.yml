@@ -6,7 +6,7 @@ on:
       pseudo_make:
         description: "Pseudo Make"
         type: boolean
-        default: true
+        default: false
 
 env:
   kernel_repository: PixelExperience-Devices/kernel_xiaomi_sm6225
@@ -128,17 +128,8 @@ jobs:
           make $flags ${{ env.defconfig }}
 
       - name: make
-        if: ${{ !inputs.pseudo_make }}
         run: |
           make $flags -j$(nproc --all)
-
-      - name: pseudo make
-        if: ${{ inputs.pseudo_make }}
-        run: |
-          mkdir -p out/arch/arm64/boot/
-          echo 123 > out/arch/arm64/boot/Image
-          echo 123 > out/arch/arm64/boot/Image.gz
-          echo 123 > out/arch/arm64/boot/Image.gz-dtb
 
       - name: anykernel
         run: |
