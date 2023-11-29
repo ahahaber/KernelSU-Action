@@ -1,4 +1,4 @@
-name: check and build
+name: build kernelsu for Redmi Note 11
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       pseudo_make:
         description: "Pseudo Make"
         type: boolean
-        default: false
+        default: true
 
 env:
   kernel_repository: PixelExperience-Devices/kernel_xiaomi_sm6225
